@@ -1,0 +1,52 @@
+{
+  "name": "easy-update-mst",
+  "version": "0.0.1",
+  "description": "Component search like google",
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "jsnext:main": "dist/index.es.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "clean": "rimraf dist",
+    "build": "npm run clean && rollup -c",
+    "lint": "eslint \"**/*.{ts,tsx}\" --ignore-pattern node_modules/",
+    "posttest": "npm run lint",
+    "prepublishOnly": "npm run build"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "search like google in react",
+    "save history search in react"
+  ],
+  "author": "Cuong Nguyen Huu",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nhcuongng/easy-search.git.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nhcuongng/easy-search.git/issues"
+  },
+  "homepage": "https://github.com/nhcuongng/easy-search.git#readme",
+  "devDependencies": {
+    "@types/react": "^16.9.49",
+    "eslint": "^7.7.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-react": "^7.20.6",
+    "rollup": "^2.26.8",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-css-only": "^2.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-peer-deps-external": "^2.2.3",
+    "rollup-plugin-terser": "^7.0.1",
+    "rollup-plugin-typescript2": "^0.27.2",
+    "typescript": "^4.0.2"
+  },
+  "dependencies": {
+    "react": "^16.13.1"
+  }
+}

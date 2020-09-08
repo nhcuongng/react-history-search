@@ -1,0 +1,47 @@
+html {
+  font-family: sans-serif;
+}
+
+.row {
+  display: flex;
+}
+
+.f8-link {
+  position: fixed;
+  bottom: 8px;
+}
+
+.search-bar {
+  position: relative;
+}
+
+.search-bar__history {
+  position: absolute;
+  top: 20px;
+  min-width: 200px;
+  padding-left: 0;
+  box-shadow: 0 0 3px #ccc;
+  display: none;
+}
+
+.search-bar__input:focus ~ .search-bar__history:not(:empty) {
+  display: block;
+}
+
+.search-bar__history-item {
+  list-style: none;
+  font-size: 14px;
+  padding: 4px 8px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.search-bar__history-item:hover {
+  cursor: pointer;
+  background: #f7f7f7;
+}
+
+.search-bar__history-remove {
+  font-size: 12px;
+  color: #ed5d65;
+}
