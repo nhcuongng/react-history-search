@@ -4,6 +4,7 @@ import { useConfig } from "../components/context";
 
 type TProp = {
   dataId: string;
+  onClick?: (value: string) => void,
 };
 
 export const Trigger: React.FC<TProp> = (props) => {
@@ -39,6 +40,7 @@ export const Trigger: React.FC<TProp> = (props) => {
         keyHistory = [input.value];
       }
       handleSearch && handleSearch(input.value)
+      props.onClick && props.onClick(input.value)
       localStorage.setItem(_KEYWORDS_KEY, JSON.stringify(keyHistory));
     }
     childProps.onClick && childProps.onClick(e);

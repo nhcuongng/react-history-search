@@ -1,6 +1,6 @@
 {
   "name": "ezy-search",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Component search like google",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
@@ -24,12 +24,12 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nhcuongng/easy-search.git.git"
+    "url": "git+https://github.com/nhcuongng/ezy-search.git"
   },
   "bugs": {
-    "url": "https://github.com/nhcuongng/easy-search.git/issues"
+    "url": "https://github.com/nhcuongng/ezy-search.git/issues"
   },
-  "homepage": "https://github.com/nhcuongng/easy-search.git#readme",
+  "homepage": "https://github.com/nhcuongng/ezy-search.git#readme",
   "devDependencies": {
     "@types/react": "^16.9.49",
     "eslint": "^7.7.0",
