@@ -1,7 +1,5 @@
 import React from "react";
-import { Trigger } from "./Trigger";
-import { History } from "./History";
-import { Provider } from './context';
+import { Provider, History, Trigger } from 'ezy-search';
 
 export const Main: React.FC = () => {
   const handleSearch = (value: string) => {
@@ -9,17 +7,19 @@ export const Main: React.FC = () => {
   };
   return (
     <Provider value={{
-      LocalStorageKey: 'aaa',
+      LocalStorageKey: 'key_in_local_storage',
       limitHistories: 5,
       handleSearch,
       isEnableEnterDown: true,
     }}>
-      <History>
+    <>
+      <History.Hint>
         <input id="some_unique_id"/>
-      </History>
+      </History.Hint>
       <Trigger dataId="some_unique_id">
         <button>Search</button>
       </Trigger>
+    </>
     </Provider>
   );
 };

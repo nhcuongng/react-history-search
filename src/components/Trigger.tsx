@@ -1,4 +1,4 @@
-import React, { ReactElement, useEffect, cloneElement } from "react";
+import React, { ReactElement, cloneElement } from "react";
 import { LocalStorageKey as KEYWORDS_KEY_DEFAULT, limitHistories as LIMIT_HISTORIES_DEFAULT } from "../constant";
 import { useConfig } from "../components/context";
 
@@ -19,10 +19,6 @@ export const Trigger: React.FC<TProp> = (props) => {
   const _KEYWORDS_KEY = LocalStorageKey || KEYWORDS_KEY_DEFAULT;
   const _LIMIT_HISTORIES = limitHistories || LIMIT_HISTORIES_DEFAULT;
 
-  useEffect(() => {
-    localStorage.setItem(_KEYWORDS_KEY, "");
-  }, []);
-
   const { dataId } = props;
 
   const childProps = child.props;
@@ -37,7 +33,7 @@ export const Trigger: React.FC<TProp> = (props) => {
         if (keyHistory.length === _LIMIT_HISTORIES) keyHistory.pop();
         // khac thi moi luu vao local storage
         if (keyHistory.every((key) => key !== input.value)) {
-          keyHistory = [...keyHistory, input.value];
+          keyHistory.unshift(input.value);
         }
       } else {
         keyHistory = [input.value];

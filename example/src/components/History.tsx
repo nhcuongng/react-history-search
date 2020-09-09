@@ -1,13 +1,16 @@
 import React, { ReactElement, cloneElement, useState, useRef } from "react";
-import { LocalStorageKey as KEYWORDS_KEY_DEFAULT, ENTER_KEY_CODE } from "../constant";
+import { LocalStorageKey as KEYWORDS_KEY_DEFAULT, ENTER_KEY_CODE, limitHistories as LIMIT_HISTORIES_DEFAULT } from "../constant";
 
 import { useConfig } from "../components/context";
+import { Hint } from './Hint';
 
 type TProps = {
   onClick?: (value: string) => void;
 }
 
-export const History: React.FC<TProps> = (props) => {
+export const History: React.FC<TProps> & {
+  Hint: typeof Hint;
+} = (props) => {
   const child = React.Children.only(props.children) as ReactElement<
     React.DetailedHTMLProps<
       React.InputHTMLAttributes<HTMLInputElement>,
@@ -16,9 +19,10 @@ export const History: React.FC<TProps> = (props) => {
   >;
 
   const inputRef = useRef<HTMLInputElement>(null);
-  const { LocalStorageKey, isEnableEnterDown, handleSearch } = useConfig();
+  const { LocalStorageKey, isEnableEnterDown, handleSearch, limitHistories } = useConfig();
 
   const _KEYWORDS_KEY = LocalStorageKey || KEYWORDS_KEY_DEFAULT;
+  const _LIMIT_HISTORIES = limitHistories || LIMIT_HISTORIES_DEFAULT;
 
   const [nodes, setNodes] = useState<React.ReactNode[]>([]);
   const childProps = child.props;
@@ -33,7 +37,7 @@ export const History: React.FC<TProps> = (props) => {
       for (let index = 0; index < histories.length; index++) {
         const newLi = (
           <li key={index} className="search-bar__history-item">
-            <span 
+            <span
               onClick={() => {
                 props.onClick && props.onClick(histories[index]);
                 handleSearch && handleSearch(histories[index]);
@@ -65,13 +69,18 @@ export const History: React.FC<TProps> = (props) => {
     if (isEnableEnterDown && e.keyCode === ENTER_KEY_CODE && inputRef && inputRef.current) {
       handleSearch && handleSearch(inputRef.current.value);
       const historiesString = localStorage.getItem(_KEYWORDS_KEY);
+      let keyHistory: string[] = [];
       if (historiesString) {
-        const histories = JSON.parse(historiesString) as string[];
-        histories.unshift(inputRef.current.value);
-        localStorage.setItem(_KEYWORDS_KEY, JSON.stringify(histories));
+        keyHistory = JSON.parse(historiesString) as string[];
+        if (keyHistory.length === _LIMIT_HISTORIES) keyHistory.pop();
+        // khac thi moi luu vao local storage
+        if (keyHistory.every((key) => key !== inputRef.current!.value)) {
+          keyHistory.unshift(inputRef.current.value);
+        }
       } else {
-        localStorage.setItem(_KEYWORDS_KEY, JSON.stringify([inputRef.current.value]));
+        keyHistory = [inputRef.current.value];
       }
+      localStorage.setItem(_KEYWORDS_KEY, JSON.stringify(keyHistory));
     }
     childProps.onKeyDown && childProps.onKeyDown(e);
   }
@@ -97,3 +106,5 @@ export const History: React.FC<TProps> = (props) => {
     </>
   );
 };
+
+History.Hint = Hint;

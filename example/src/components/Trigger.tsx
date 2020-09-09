@@ -19,10 +19,6 @@ export const Trigger: React.FC<TProp> = (props) => {
   const _KEYWORDS_KEY = LocalStorageKey || KEYWORDS_KEY_DEFAULT;
   const _LIMIT_HISTORIES = limitHistories || LIMIT_HISTORIES_DEFAULT;
 
-  useEffect(() => {
-    localStorage.setItem(_KEYWORDS_KEY, "");
-  }, []);
-
   const { dataId } = props;
 
   const childProps = child.props;

@@ -5,7 +5,6 @@ import resolve from 'rollup-plugin-node-resolve';
 import { terser } from "rollup-plugin-terser";
 import css from 'rollup-plugin-css-only'
 
-
 import pkg from './package.json';
 
 export default {
