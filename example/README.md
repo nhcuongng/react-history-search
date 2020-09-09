@@ -1,1 +1,10 @@
-https://medium.com/@dahvinchee/how-to-set-up-a-react-typescript-project-from-scratch-with-babel-and-webpack-6b069881229d
+# Descrtiption
+
+This is basic example for use ```ezy-search```
+
+# Run
+
+```bash
+yarn
+yarn dev
+```

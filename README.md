@@ -1,4 +1,4 @@
-# Search like google in react
+# Search Like Google In React
 
 [![npm version](https://badge.fury.io/js/ezy-search.svg)](https://badge.fury.io/js/ezy-search)
 ![npm](https://img.shields.io/npm/dw/ezy-search)
