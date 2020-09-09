@@ -2720,13 +2720,12 @@ extglob@^2.0.4:
     snapdragon "^0.8.1"
     to-regex "^3.0.1"
 
-ezy-search@^0.0.1:
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/ezy-search/-/ezy-search-0.0.1.tgz#67c7c5cb0858042cd590c53baf1593602bdc97b4"
-  integrity sha512-w/+mXPywIa9PfbLmXS52CLX3EIMOfRWSBmjeqteilp0VRHjX8t/IripX+SQ+rji1bgwNBaRDhhi8N3Jc1aYlmg==
+ezy-search@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/ezy-search/-/ezy-search-0.0.2.tgz#9b6c72fcea056e35ba44141155ea228754b8b1c8"
+  integrity sha512-LMVq8sTdlVFFop8eQ+LqG6auFPzqXd0D3bDqvq1X+auzi6OJlYAKDwMcs+qsnKSJRU12N0UJPrikt9XeoMYK9A==
   dependencies:
     react "^16.13.1"
-    react-dom "^16.13.1"
 
 fast-deep-equal@^3.1.1:
   version "3.1.3"

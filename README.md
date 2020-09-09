@@ -7,7 +7,7 @@
 
 This is my component supported:
 
-![exmple for ezy-search](https://raw.githubusercontent.com/nhcuongng/nhcuongng/master/img/example.png)
+![exmple for ezy-search](https://raw.githubusercontent.com/nhcuongng/ezy-search/master/img/example.png)
 
 ## features
 
