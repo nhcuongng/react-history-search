@@ -4,15 +4,15 @@ import { Provider, History, Trigger } from 'ezy-search';
 import 'ezy-search/dist/index.css';
 
 export const Main: React.FC = () => {
-  // const handleSearch = (value: string) => {
-  //   alert(`Call some API to handle search keyword: ${value}`);
-  // };
+  const handleSearch = (value: string) => {
+    alert(`Call some API to handle search keyword: ${value}`);
+  };
   return (
     <Provider value={{
       // pass options in here
       LocalStorageKey: 'key_in_local_storage',
       limitHistories: 5,
-      // handleSearch,
+      handleSearch,
       isEnableEnterDown: true,
     }}>
       <History.Hint>

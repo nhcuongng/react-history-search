@@ -1,6 +1,6 @@
 # Descrtiption
 
-This is basic example for use ```ezy-search```
+This is basic example for use ```react-histories-search```
 
 # Run
 
