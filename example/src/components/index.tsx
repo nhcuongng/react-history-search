@@ -1,7 +1,7 @@
 import React from "react";
 // import { Provider, History, Trigger } from '../../package'
-import { Provider, History, Trigger } from 'ezy-search';
-import 'ezy-search/dist/index.css';
+import { Provider, History, Trigger } from 'react-histories-search';
+import 'react-histories-search/dist/index.css';
 
 export const Main: React.FC = () => {
   const handleSearch = (value: string) => {
