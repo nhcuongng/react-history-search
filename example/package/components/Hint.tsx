@@ -2,7 +2,7 @@ import React, { ReactElement, cloneElement, useState, useRef, useEffect } from "
 import { LocalStorageKey as KEYWORDS_KEY_DEFAULT, ENTER_KEY_CODE } from "../constant";
 import { interpolateStyle } from '../utils';
 
-import { useConfig } from "../components/context";
+import { useConfig } from "./context";
 
 type TProps = {
   onClick?: (value: string) => void;

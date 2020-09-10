@@ -1,16 +1,3 @@
-html {
-  font-family: sans-serif;
-}
-
-.row {
-  display: flex;
-}
-
-.f8-link {
-  position: fixed;
-  bottom: 8px;
-}
-
 .search-bar {
   position: relative;
 }

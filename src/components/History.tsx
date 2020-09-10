@@ -93,7 +93,7 @@ export const History: React.FC<TProps> & {
   const mainInput = cloneElement(child as any, {
     ...childProps,
     ref: inputRef,
-    className: `${childProps.className} search-bar__input`,
+    className: `${childProps.className || ''} search-bar__input`,
     autoComplete: "off",
     onFocus,
     onKeyDown

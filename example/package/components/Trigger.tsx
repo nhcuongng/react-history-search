@@ -1,9 +1,10 @@
-import React, { ReactElement, useEffect, cloneElement } from "react";
+import React, { ReactElement, cloneElement } from "react";
 import { LocalStorageKey as KEYWORDS_KEY_DEFAULT, limitHistories as LIMIT_HISTORIES_DEFAULT } from "../constant";
-import { useConfig } from "../components/context";
+import { useConfig } from "./context";
 
 type TProp = {
   dataId: string;
+  onClick?: (value: string) => void,
 };
 
 export const Trigger: React.FC<TProp> = (props) => {
@@ -33,12 +34,13 @@ export const Trigger: React.FC<TProp> = (props) => {
         if (keyHistory.length === _LIMIT_HISTORIES) keyHistory.pop();
         // khac thi moi luu vao local storage
         if (keyHistory.every((key) => key !== input.value)) {
-          keyHistory = [...keyHistory, input.value];
+          keyHistory.unshift(input.value);
         }
       } else {
         keyHistory = [input.value];
       }
       handleSearch && handleSearch(input.value)
+      props.onClick && props.onClick(input.value)
       localStorage.setItem(_KEYWORDS_KEY, JSON.stringify(keyHistory));
     }
     childProps.onClick && childProps.onClick(e);

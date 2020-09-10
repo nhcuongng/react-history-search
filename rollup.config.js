@@ -2,9 +2,9 @@ import typescript from 'rollup-plugin-typescript2';
 import commonjs from 'rollup-plugin-commonjs';
 import external from 'rollup-plugin-peer-deps-external';
 import resolve from 'rollup-plugin-node-resolve';
-// import { terser } from "rollup-plugin-terser";
-import autoNamedExports from 'rollup-plugin-auto-named-exports';
-import css from 'rollup-plugin-css-only'
+import autoprefixer from "autoprefixer";
+import postcss from "rollup-plugin-postcss";
+import { terser } from "rollup-plugin-terser";
 
 import pkg from './package.json';
 
@@ -33,14 +33,18 @@ export default {
       exclude: '**/__tests__/**',
       clean: true,
     }),
-    // terser(), // minifies generated bundles
+    terser(), // minifies generated bundles
     commonjs({
       include: ['node_modules/**'],
       namedExports: {
         // no need manual custom
       }
     }),
-    autoNamedExports(),
-    css({ output: 'bundle.css' })
+    postcss({
+      plugins: [autoprefixer()],
+      sourceMap: true,
+      extract: true,
+      minimize: true
+    }),
   ],
 };

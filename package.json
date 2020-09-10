@@ -1,6 +1,6 @@
 {
-  "name": "ezy-search",
-  "version": "0.0.4",
+  "name": "react-histories-search",
+  "version": "0.0.7",
   "description": "Component search like google",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
@@ -18,31 +18,32 @@
   ],
   "keywords": [
     "search like google in react",
-    "save history search in react"
+    "history search with react",
+    "react add on search"
   ],
   "author": "Cuong Nguyen Huu",
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nhcuongng/ezy-search.git"
+    "url": "git+https://github.com/nhcuongng/react-histories-search.git"
   },
   "bugs": {
-    "url": "https://github.com/nhcuongng/ezy-search.git/issues"
+    "url": "https://github.com/nhcuongng/react-histories-search.git/issues"
   },
-  "homepage": "https://github.com/nhcuongng/ezy-search.git#readme",
+  "homepage": "https://github.com/nhcuongng/react-histories-search.git#readme",
   "devDependencies": {
     "@types/react": "^16.9.49",
+    "autoprefixer": "^9.8.6",
     "eslint": "^7.7.0",
     "eslint-config-airbnb": "^18.2.0",
     "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-jsx-a11y": "^6.3.1",
     "eslint-plugin-react": "^7.20.6",
     "rollup": "^2.26.8",
-    "rollup-plugin-auto-named-exports": "^1.0.0-beta.3",
     "rollup-plugin-commonjs": "^10.1.0",
-    "rollup-plugin-css-only": "^2.1.0",
     "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-peer-deps-external": "^2.2.3",
+    "rollup-plugin-postcss": "^3.1.8",
     "rollup-plugin-terser": "^7.0.1",
     "rollup-plugin-typescript2": "^0.27.2",
     "typescript": "^4.0.2"

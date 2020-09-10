@@ -1,13 +1,13 @@
 # Search Like Google In React
 
-[![npm version](https://badge.fury.io/js/ezy-search.svg)](https://badge.fury.io/js/ezy-search)
-![npm](https://img.shields.io/npm/dw/ezy-search)
-![npm bundle size](https://img.shields.io/bundlephobia/min/ezy-search)
-![David](https://img.shields.io/david/nhcuongng/ezy-search)
+[![npm version](https://badge.fury.io/js/react-histories-search.svg)](https://badge.fury.io/js/react-histories-search)
+![npm](https://img.shields.io/npm/dw/react-histories-search)
+![npm bundle size](https://img.shields.io/bundlephobia/min/react-histories-search)
+![David](https://img.shields.io/david/nhcuongng/react-histories-search)
 
 This is my component supported:
 
-![exmple for ezy-search](https://raw.githubusercontent.com/nhcuongng/ezy-search/master/img/example.png)
+![exmple for react-histories-search](https://raw.githubusercontent.com/nhcuongng/react-histories-search/master/img/example.gif)
 
 ## features
 
@@ -20,7 +20,8 @@ This is my component supported:
 
 ```ts
 import React from "react";
-import { Provider, History, Trigger } from 'ezy-search';
+import { Provider, History, Trigger } from 'react-histories-search';
+import 'react-histories-search/dist/index.css'; // import css
 
 export const Main: React.FC = () => {
   const handleSearch = (value: string) => {
@@ -39,11 +40,12 @@ export const Main: React.FC = () => {
 };
 ```
 
-### Example 2: Full options (*recommed*)
+### Example 2: Full options (*recommend*)
 
 ```ts
 import React from "react";
-import { Provider, History, Trigger } from 'ezy-search';
+import { Provider, History, Trigger } from 'react-histories-search';
+import 'react-histories-search/dist/index.css'; // import css
 
 export const Main: React.FC = () => {
   const handleSearch = (value: string) => {
@@ -83,11 +85,11 @@ export const Main: React.FC = () => {
 |--------------	|----------------------------------------------------------------------------------------------------------------	|-----------------------------------------------------------------------------------------------------------------------	|
 | History      	| Insert history table                                                                                           	| onClick={(keyword) => // handle your action search}                                                                   	|
 | History.Hint 	| Insert hints to input tag, hints based on  **previous keyword**                                                	| onClick (like ```<History />```) allowTabFill: type is boolean, allow you type  **tab** to fill text on input by hint 	|
-| Trigger      	| Work like a button **search** Tips: you can't not necessary use it, if you use option  ```isEnableEnterDown``` 	|                                                                                                                       	|
+| Trigger      	| Work like a button **search**. Tips: you can't not necessary use it, if you use option  ```isEnableEnterDown``` | dataId (requried) is must same with id of input tag	|                                                                                                                       	|
 
 ## Example
 
-You can download example
+You can download [example](https://github.com/nhcuongng/react-histories-search/tree/master/example)
 
 ## Thanks to
 

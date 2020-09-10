@@ -175,7 +175,7 @@ export const Hint: React.FC<TProps> = (props) => {
     child as any, {
     ...childProps,
     ref: inputRef,
-    className: `${childProps.className} search-bar__input`,
+    className: `${childProps.className || ''} search-bar__input`,
     autoComplete: "off",
     onFocus,
     onKeyDown,

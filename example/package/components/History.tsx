@@ -1,7 +1,7 @@
 import React, { ReactElement, cloneElement, useState, useRef } from "react";
 import { LocalStorageKey as KEYWORDS_KEY_DEFAULT, ENTER_KEY_CODE, limitHistories as LIMIT_HISTORIES_DEFAULT } from "../constant";
 
-import { useConfig } from "../components/context";
+import { useConfig } from "./context";
 import { Hint } from './Hint';
 
 type TProps = {
