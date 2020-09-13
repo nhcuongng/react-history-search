@@ -1,6 +1,6 @@
 {
-  "name": "react-histories-search",
-  "version": "0.0.7",
+  "name": "react-history-search",
+  "version": "0.0.2",
   "description": "Component search like google",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
@@ -19,18 +19,20 @@
   "keywords": [
     "search like google in react",
     "history search with react",
-    "react add on search"
+    "react add on search",
+    "react input auto suggest",
+    "history hint"
   ],
   "author": "Cuong Nguyen Huu",
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nhcuongng/react-histories-search.git"
+    "url": "git+https://github.com/nhcuongng/react-history-search.git"
   },
   "bugs": {
-    "url": "https://github.com/nhcuongng/react-histories-search.git/issues"
+    "url": "https://github.com/nhcuongng/react-history-search.git/issues"
   },
-  "homepage": "https://github.com/nhcuongng/react-histories-search.git#readme",
+  "homepage": "https://github.com/nhcuongng/react-history-search.git#readme",
   "devDependencies": {
     "@types/react": "^16.9.49",
     "autoprefixer": "^9.8.6",
@@ -48,7 +50,7 @@
     "rollup-plugin-typescript2": "^0.27.2",
     "typescript": "^4.0.2"
   },
-  "dependencies": {
-    "react": "^16.13.1"
+  "peerDependencies": {
+    "react": ">=16.0.0"
   }
 }

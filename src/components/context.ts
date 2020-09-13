@@ -1,17 +1,17 @@
 import { createContext, useContext } from 'react';
-import { LocalStorageKey, limitHistories } from '../constant';
+import { LocalStorageKey, limitHistory } from '../constant';
 
 export type TConfig = {
   LocalStorageKey?: string,
-  limitHistories?: number,
-  isEnableEnterDown?: boolean,
+  limitHistory?: number,
+  isEnterDown?: boolean,
   handleSearch?: (value: string) => void,
 };
 
 export const config: TConfig = {
   LocalStorageKey,
-  limitHistories,
-  isEnableEnterDown: false,
+  limitHistory,
+  isEnterDown: false,
 }
 
 const ConfigContext = createContext<null | TConfig>(null);

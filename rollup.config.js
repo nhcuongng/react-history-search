@@ -36,9 +36,6 @@ export default {
     terser(), // minifies generated bundles
     commonjs({
       include: ['node_modules/**'],
-      namedExports: {
-        // no need manual custom
-      }
     }),
     postcss({
       plugins: [autoprefixer()],

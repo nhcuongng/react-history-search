@@ -1,5 +1,5 @@
 import React, { ReactElement, cloneElement } from "react";
-import { LocalStorageKey as KEYWORDS_KEY_DEFAULT, limitHistories as LIMIT_HISTORIES_DEFAULT } from "../constant";
+import { LocalStorageKey as KEYWORDS_KEY_DEFAULT, limitHistory as LIMIT_HISTORIES_DEFAULT } from "../constant";
 import { useConfig } from "./context";
 
 type TProp = {
@@ -15,10 +15,10 @@ export const Trigger: React.FC<TProp> = (props) => {
     >
   >;
 
-  const { LocalStorageKey, limitHistories, handleSearch } = useConfig();
+  const { LocalStorageKey, limitHistory, handleSearch } = useConfig();
 
   const _KEYWORDS_KEY = LocalStorageKey || KEYWORDS_KEY_DEFAULT;
-  const _LIMIT_HISTORIES = limitHistories || LIMIT_HISTORIES_DEFAULT;
+  const _LIMIT_HISTORIES = limitHistory || LIMIT_HISTORIES_DEFAULT;
 
   const { dataId } = props;
 
