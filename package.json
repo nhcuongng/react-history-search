@@ -1,7 +1,7 @@
 {
   "name": "react-history-search",
-  "version": "0.0.3",
-  "description": "Component search like google",
+  "version": "0.0.4",
+  "description": "Component save you search keyword and hint it for next type",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "jsnext:main": "dist/index.es.js",

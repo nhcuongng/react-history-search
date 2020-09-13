@@ -1,4 +1,4 @@
-# Search Like Google In React
+# History Keyword will be saved and hint
 
 [![npm version](https://badge.fury.io/js/react-history-search.svg)](https://badge.fury.io/js/react-history-search)
 ![npm](https://img.shields.io/npm/dw/react-history-search)
@@ -57,7 +57,7 @@ export const Main: React.FC = () => {
       handleSearch,
       isEnterDown: true,
     }}>
-      <History isHint> // more props, see below
+      <History isHint isTabFill> // more props, see below
         <input id="some_unique_id"/>
       </History>
       // option isEnterDown is used, trigger maybe useless
@@ -74,7 +74,7 @@ export const Main: React.FC = () => {
 | name  |  type |  defalut | optional  | description |
 |---|---|---|---|---|
 |  LocalStorageKey | string  |  searchKeywords | true | Key will save on local storage |
-| limitHistory | number  | 5 | true  | limit histories will save in local storage |
+| limitHistory | number  | 5 | true  | limit history will save in local storage |
 | handleSearch | Function  | no |  true | callback return your keyword, you will handle search in here |
 | isEnterDown | boolean  | false |  true | press enter to search |
 
@@ -83,8 +83,8 @@ export const Main: React.FC = () => {
 
 | Name    	| description                                                                                                                                            	| props                                                                                                                                                                                                          	|
 |---------	|--------------------------------------------------------------------------------------------------------------------------------------------------------	|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|
-| History 	| Insert history table, require child component inside is input                                                                                          	| **onClick**={(keyword) => // handle your action search}.  **isTabFill**: boolean // type tab to fill hint.   **isHint**: boolean // enable table history table.   **isRemoveHistory**: boolean // enable button remove history 	|
-| Trigger 	| Work like a button **search**, require child component inside is button . Tips: you can't necessary use it, if you use option  ```isEnableEnterDown``` 	| dataId (requried) is must same with id of input tag                                                                                                                                                            	|                                                                                                              	|
+| History 	| Insert history table, require child component inside is input                                                                                          	| **onClick** ((value: string) => void): handle your action search.  **isTabFill** (boolean): press tab to fill value of input by hint.   **isHint** (boolean): enable hint.   **isRemoveHistory** (boolean): enable remove history 	|
+| Trigger 	| Work like a button **search**, require child component inside is button . Tips: you can't necessary use it, if you use option  ```isEnterDown``` 	| **dataId (requried)** is must same with id of input tag                                                                                                                                                            	|                                                                                                              	|
 
 
 ## Example
@@ -93,5 +93,5 @@ You can download [example](https://github.com/nhcuongng/react-history-search/tre
 
 ## Thanks to
 
-- Contributor [kmaCoders](https://github.com/kmacoders) for your support 💕 
-- [react-autocomplete-hint](https://github.com/ejmudi/react-autocomplete-hint) package 😜
+- Contributor [kmacoders](https://github.com/kmacoders) for your support 💕 
+- [react-autocomplete-hint](https://github.com/ejmudi/react-autocomplete-hint) package for hint 😜
