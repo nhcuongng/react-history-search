@@ -1,19 +1,68 @@
+:root {
+  --border-color: rgb(223, 223, 223);
+  --font-size-search: 16px;
+}
+
 .search-bar {
   position: relative;
 }
 
-.search-bar__history {
-  position: absolute;
-  top: 20px;
-  min-width: 200px;
-  padding-left: 0;
-  box-shadow: 0 0 3px #ccc;
-  display: none;
+/* Start style for input  */
+.search-bar__input {
+  padding-left: 20px;
+  width: 500px;
+  height: 50px;
+  border-radius: 999px;
+  border: 1px solid var(--border-color);
+  transition: all 0.4s;
+  font-size: var(--font-size-search);
 }
-
+.search-bar__input:focus {
+  outline: none;
+}
 .search-bar__input:focus ~ .search-bar__history:not(:empty) {
   display: block;
 }
+.search-bar__input:hover {
+  box-shadow: rgba(117, 87, 87, 0.12) 0px 0px 7px 3px;
+}
+
+/* End style for input  */
+
+
+/* Start style for button  */
+.search-bar__btn {
+  margin-left: 10px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid var(--border-color);
+  background-color: white;
+  transition: all 0.4s;
+
+}
+.search-bar__btn:focus {
+  outline: none;
+}
+.search-bar__btn:hover {
+  transform: rotate(360deg);
+  box-shadow: rgba(117, 87, 87, 0.12) 0px 0px 7px 3px;
+}
+/* End style for button */
+
+/* Start style for history  */
+.search-bar__history {
+  position: absolute;
+  top: 40px;
+  width: 470px;
+  min-width: 200px;
+  padding: 0 15px;
+  box-shadow: 0 0 3px #ccc;
+  display: none;
+  border-radius: 10px;
+  transition: all 0.4s;
+}
+
 
 .search-bar__history-item {
   list-style: none;
@@ -21,14 +70,22 @@
   padding: 4px 8px;
   display: flex;
   justify-content: space-between;
-}
-
-.search-bar__history-item:hover {
-  cursor: pointer;
-  background: #f7f7f7;
+  border-bottom: 1px solid rgb(243, 243, 243);
+  height: 50px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  font-size: var(--font-size-search);
 }
 
 .search-bar__history-remove {
-  font-size: 12px;
-  color: #ed5d65;
+  font-size: 10px;
+  transition: all 0.4s;
+}
+.search-bar__history-remove:hover {
+  transform: rotate(360deg);
+}
+.search-bar__history-item:hover {
+  cursor: pointer;
+  background: #f7f7f7;
 }

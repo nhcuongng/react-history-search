@@ -55,7 +55,7 @@ export const History: React.FC<TProps> & {
               }}
               onMouseDown={(e) => e.preventDefault()}
             >
-              Remove
+              &#10060;
             </span>
           </li>
         );
@@ -93,6 +93,7 @@ export const History: React.FC<TProps> & {
   const mainInput = cloneElement(child as any, {
     ...childProps,
     ref: inputRef,
+    placeholder: childProps.placeholder || 'Search something',
     className: `${childProps.className} search-bar__input`,
     autoComplete: "off",
     onFocus,

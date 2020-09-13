@@ -48,6 +48,7 @@ export const Trigger: React.FC<TProp> = (props) => {
 
   const trigger = cloneElement(child as any, {
     ...childProps,
+    className: `${childProps.className} search-bar__btn`,
     onClick
   });
 

@@ -95,7 +95,7 @@ export const Hint: React.FC<TProps> = (props) => {
               }}
               onMouseDown={(e) => e.preventDefault()}
             >
-              Remove
+              &#10060;
             </span>
           </li>
         );
@@ -175,6 +175,7 @@ export const Hint: React.FC<TProps> = (props) => {
     child as any, {
     ...childProps,
     ref: inputRef,
+    placeholder: childProps.placeholder || 'Search something',
     className: `${childProps.className} search-bar__input`,
     autoComplete: "off",
     onFocus,
