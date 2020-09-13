@@ -11,7 +11,8 @@
     "build": "npm run clean && rollup -c",
     "lint": "eslint \"**/*.{ts,tsx}\" --ignore-pattern node_modules/",
     "posttest": "npm run lint",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "example": "cd ./example && npm run dev"
   },
   "files": [
     "dist"

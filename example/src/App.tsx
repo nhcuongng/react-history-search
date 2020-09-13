@@ -1,10 +1,10 @@
 import React from "react";
-import { Provider, History, Trigger } from '../package'
-import '../package/App.css';
+// import { Provider, History, Trigger } from '../package'
+// import '../package/App.css';
+import { Provider, History, Trigger } from 'react-history-search';
+import 'react-history-search/dist/index.css';
 import './index.css';
 
-// import { Provider, History, Trigger } from 'react-histories-search';
-// import 'react-histories-search/dist/index.css';
 
 export default function App() {
   const handleSearch = (value: string) => {

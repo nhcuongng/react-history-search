@@ -16,7 +16,7 @@
     "@types/node": "^14.0.27",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-histories-search": "0.0.7",
+    "react-history-search": "^0.0.3",
     "style-loader": "^1.2.1"
   },
   "devDependencies": {
