@@ -4779,10 +4779,10 @@ react-dom@^16.13.1:
     prop-types "^15.6.2"
     scheduler "^0.19.1"
 
-react-history-search@^0.0.3:
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/react-history-search/-/react-history-search-0.0.3.tgz#88426a0fc8410eff0c4b1858949aae3a8422cfac"
-  integrity sha512-nBao+M0NQYDotWjN6Zp0L+ym/BVxWq80BPLk1KtSpEi/VbdTYi5A/N52pFf/EwZNnsXFu4m6EI2NB+/BK6lsww==
+react-history-search@^0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/react-history-search/-/react-history-search-0.0.4.tgz#e16253c6046c25ab6b779c49f6cdaadf75227848"
+  integrity sha512-YEMjmaYmXbkPrWdWbzoZI2oJiQJEW9FmTz2IC+eAEVcumTeP4mtfNbRNLXCZ9kWq5Vu0POllyIc2HnSNAV4cpA==
 
 react-is@^16.12.0, react-is@^16.8.1:
   version "16.13.1"

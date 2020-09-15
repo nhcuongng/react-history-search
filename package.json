@@ -1,6 +1,6 @@
 {
   "name": "react-history-search",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Component save you search keyword and hint it for next type",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
@@ -19,7 +19,7 @@
   ],
   "keywords": [
     "search like google in react",
-    "history search with react",
+    "history keyword search with react",
     "react add on search",
     "react input auto suggest",
     "history hint"
@@ -53,5 +53,6 @@
   },
   "peerDependencies": {
     "react": ">=16.0.0"
-  }
+  },
+  "dependencies": {}
 }

@@ -155,8 +155,10 @@ export const History: React.FC<TProps> = (props) => {
       if (historiesString) {
         const histories = JSON.parse(historiesString) as string[];
         if (histories.length === _LIMIT_HISTORIES) histories.pop();
-        histories.unshift(inputRef.current.value);
-        localStorage.setItem(_KEYWORDS_KEY, JSON.stringify(histories));
+        if (histories.every((key) => key !== inputRef.current!.value)) {
+          histories.unshift(inputRef.current.value);
+          localStorage.setItem(_KEYWORDS_KEY, JSON.stringify(histories));
+        }
       } else {
         localStorage.setItem(_KEYWORDS_KEY, JSON.stringify([inputRef.current.value]));
       }

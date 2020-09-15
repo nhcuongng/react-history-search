@@ -13,7 +13,7 @@ export default function App() {
   return (
     <Provider value={{
       // pass options in here
-      LocalStorageKey: 'key_in_local_storage',
+      // LocalStorageKey: 'key_in_local_storage',
       limitHistory: 5,
       handleSearch,
       isEnterDown: true,
